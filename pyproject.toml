@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphic-toolkit"
+version = "1.0.0"
+description = "Reproducible favicon and brand asset packs from raster source images."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Eximus" }]
+keywords = ["branding", "favicon", "image-processing", "social-images"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = ["Pillow>=10.3,<13"]
+
+[project.scripts]
+graphic-toolkit = "graphic_toolkit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/andres9125/graphic-toolkit"
+Repository = "https://github.com/andres9125/graphic-toolkit"
+Issues = "https://github.com/andres9125/graphic-toolkit/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
